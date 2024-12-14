@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AoC_2023_03
+namespace AdventOfCode._2023_03
 {
     public class EnginePartProcessor
     {
@@ -79,7 +79,14 @@ namespace AoC_2023_03
 
         public char[,] ProcessInput(string filename)
         {
-            string filePath = $"Data\\{filename}.txt";
+            string currentDirectory = AppDomain.CurrentDomain.BaseDirectory;
+
+            string filePath = Path.Combine(currentDirectory, "Data", "2023-03", $"{filename}.txt");
+
+            if (!File.Exists(filePath))
+            {
+                throw new FileNotFoundException($"The file '{filePath}' was not found.");
+            }
 
             string[] lines = File.ReadAllLines(filePath);
 

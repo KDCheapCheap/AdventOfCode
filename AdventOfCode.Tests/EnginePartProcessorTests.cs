@@ -1,4 +1,6 @@
-namespace AoC_2023_03.Tests
+using AdventOfCode._2023_03;
+
+namespace AdventOfCode_2023_03.Tests
 {
     public class EnginePartProcessorTests
     {

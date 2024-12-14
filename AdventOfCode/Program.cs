@@ -1,2 +1,6 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using AdventOfCode._2024_01;
+
+LocationIDSorter locationIDSorter = new LocationIDSorter();
+
+Console.WriteLine($"Final answer: {locationIDSorter.SolveFinalAnswer()}");
+
